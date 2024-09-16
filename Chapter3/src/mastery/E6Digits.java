@@ -12,7 +12,7 @@ public class E6Digits {
 
         int number = digit.nextInt();
         
-    
+        
         int digit1 = number % 10;
         int digit2 = number % 100;
         int digit3 = number / 100;
