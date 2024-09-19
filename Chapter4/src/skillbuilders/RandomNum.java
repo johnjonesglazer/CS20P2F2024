@@ -21,7 +21,6 @@ public class RandomNum {
             System.out.println("Random number between " + min + " and " + max + ": " + randomNum);
         }
 
-        scanner.close();
     }
 }
 
