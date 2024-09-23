@@ -16,6 +16,6 @@ public class NumbersSum {
 			sum += x;
 		}
 		System.out.println("The sum of all numbers is " + sum + "."); 
-		scanner.close();
+		
 	}
 }
