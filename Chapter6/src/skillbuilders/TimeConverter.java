@@ -18,6 +18,7 @@ import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeEvent;
+import javax.swing.SwingConstants;
 
 public class TimeConverter {
 
@@ -73,8 +74,9 @@ public class TimeConverter {
 		timeInput.setColumns(10);
 		
 		
-		JLabel output = new JLabel("New label");
-		output.setBounds(182, 77, 77, 40);
+		JLabel output = new JLabel("Waiting For Convert.");
+		output.setHorizontalAlignment(SwingConstants.CENTER);
+		output.setBounds(163, 77, 124, 40);
 		frame.getContentPane().add(output);
 		
 		JComboBox selection = new JComboBox();
@@ -85,18 +87,22 @@ public class TimeConverter {
 				if (selection.getSelectedItem().equals("Hours to Minutes")) 
 				{
 					timeInput.setText("Input Hours");
+					output.setText("Waiting For Convert.");
 				}
 				else if (selection.getSelectedItem().equals("Days to Hours")) 
 				{
 					timeInput.setText("Input Days");
+					output.setText("Waiting For Convert.");
 				}
 				else if (selection.getSelectedItem().equals("Minutes to Hours")) 
 				{
 					timeInput.setText("Input Minutes");
+					output.setText("Waiting For Convert.");
 				} 
 				else if (selection.getSelectedItem().equals("Hours to Days")) 
 				{
 					timeInput.setText("Input Hours");
+					output.setText("Waiting For Convert.");
 				}
 				
 			}
@@ -119,20 +125,27 @@ public class TimeConverter {
 				{
 					String txtnumb = timeInput.getText();
 					double numb = Double.parseDouble(txtnumb);
-					output.setText(String.valueOf(Math.round(((numb * 60) * 100.0) / 100.0)));
+					output.setText(String.valueOf(Math.round(((numb * 60) * 100.0) / 100.0))+ " Minutes.");
 				}
 				else if (selection.getSelectedItem().equals("Days to Hours")) 
 				{
-					timeInput.setText("Input Days");
+					String txtnumb = timeInput.getText();
+					double numb = Double.parseDouble(txtnumb);
+					output.setText(String.valueOf(Math.round(((numb * 24) * 100.0) / 100.0))+ " Hours.");
 				}
 				else if (selection.getSelectedItem().equals("Minutes to Hours")) 
 				{
-					timeInput.setText("Input Minutes");
+					String txtnumb = timeInput.getText();
+					double numb = Double.parseDouble(txtnumb);
+					output.setText(String.valueOf(((numb / 60) * 100.0) / 100.0) + " Hours.");
 				} 
 				else if (selection.getSelectedItem().equals("Hours to Days")) 
 				{
-					timeInput.setText("Input Hours");
+					String txtnumb = timeInput.getText();
+					double numb = Double.parseDouble(txtnumb);
+					output.setText(String.valueOf(((numb / 24) * 100.0) / 100.0+ " Days."));
 				}
+				
 				
 				
 				
