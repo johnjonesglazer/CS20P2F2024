@@ -17,6 +17,7 @@ import javax.swing.JTextArea;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import java.beans.PropertyChangeListener;
+import java.text.DecimalFormat;
 import java.beans.PropertyChangeEvent;
 import javax.swing.SwingConstants;
 
@@ -25,6 +26,8 @@ public class TimeConverter {
 	private JFrame frame;
 	private JTextField Fn;
 	private JTextField timeInput;
+	
+	DecimalFormat dc = new DecimalFormat("0.00");
 
 	/**
 	 * Launch the application.
@@ -137,13 +140,14 @@ public class TimeConverter {
 				{
 					String txtnumb = timeInput.getText();
 					double numb = Double.parseDouble(txtnumb);
-					output.setText(String.valueOf(((numb / 60) * 100.0) / 100.0) + " Hours.");
+					output.setText(dc.format((numb / 60))+ " Hours.");
 				} 
 				else if (selection.getSelectedItem().equals("Hours to Days")) 
 				{
 					String txtnumb = timeInput.getText();
 					double numb = Double.parseDouble(txtnumb);
-					output.setText(String.valueOf(((numb / 24) * 100.0) / 100.0+ " Days."));
+					output.setText(dc.format((numb / 24))+ " Days.");
+					
 				}
 				
 				

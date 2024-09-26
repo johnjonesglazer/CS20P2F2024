@@ -65,8 +65,9 @@ public class Exponentiation {
 		input1.setColumns(10);
 		
 		JLabel lblNewLabel = new JLabel("<html>What is the number you want on the bottom?</html>");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setLabelFor(input1);
-		lblNewLabel.setBounds(21, 104, 120, 32);
+		lblNewLabel.setBounds(10, 97, 141, 46);
 		frame.getContentPane().add(lblNewLabel);
 		
 		input2 = new JTextField();
@@ -75,12 +76,13 @@ public class Exponentiation {
 		input2.setColumns(10);
 		
 		lblNewLabel_1 = new JLabel("<html>What is the number you want on the top?</html>");
-		lblNewLabel_1.setBounds(169, 101, 110, 38);
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setBounds(161, 99, 140, 42);
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		JLabel output = new JLabel("");
 		output.setHorizontalAlignment(SwingConstants.CENTER);
-		output.setBounds(130, 197, 46, 14);
+		output.setBounds(67, 194, 175, 32);
 		frame.getContentPane().add(output);
 		
 		JButton run = new JButton("Go!");
@@ -93,7 +95,9 @@ public class Exponentiation {
 				
 				String txtnumb2 = input2.getText();
 				double numb2 = Double.parseDouble(txtnumb2);
-							
+				
+				
+				
 				output.setText(String.valueOf(powerOf(numb1, numb2)));
 				
 				

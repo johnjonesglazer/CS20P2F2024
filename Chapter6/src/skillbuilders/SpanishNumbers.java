@@ -11,7 +11,7 @@ public class SpanishNumbers {
     private int counter = 1;
 
     public static void main(String[] args) {
-        // Directly create and display the window without EventQueue
+        
         SpanishNumbers window = new SpanishNumbers();
         window.frame.setVisible(true);
     }
@@ -26,7 +26,7 @@ public class SpanishNumbers {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().setLayout(null);
 
-        // Button to display next number
+
         JButton btnNext = new JButton("Next Number");
         btnNext.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -40,7 +40,7 @@ public class SpanishNumbers {
         btnNext.setBounds(90, 100, 120, 30);
         frame.getContentPane().add(btnNext);
 
-        // Label to display the Spanish number
+     
         lblNumber = new JLabel("Click to start");
         lblNumber.setBounds(110, 50, 100, 30);
         frame.getContentPane().add(lblNumber);
