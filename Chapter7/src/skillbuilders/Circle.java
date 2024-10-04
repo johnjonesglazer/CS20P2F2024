@@ -2,7 +2,7 @@ package skillbuilders;
 
 public class Circle {
 	
-	private final double PI = 
+	private final double PI = 3.1415;
 	
 	private double r;
 	
@@ -12,6 +12,18 @@ public class Circle {
 		r = 2.4;
 	}
 	
+	
+	public void setRadius(double t)
+	{
+		r = t;
+	}
+	
+	public double getRadius()
+	{
+		return r;
+	}
+	
+
 	public Circle(double rad)
 	{
 		r = rad;
@@ -19,9 +31,11 @@ public class Circle {
 	
 	public double circumference(){
 		
-		circum = (2* PI * r);
-		return;
+		double circum = (2 * PI * r);
+		return(circum);
 	}
+	
+	
 	
 
 }
