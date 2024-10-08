@@ -43,4 +43,15 @@ public class Rectangle {
 		return(p);
 	}
 	
+	public String displayAreaFormula() {
+		String aFormula = (length + "  *  " + width + "  =  " + length * width);
+		return(aFormula);
+	}
+	
+	
+	
+	
+	
+	
+	
 }

@@ -36,6 +36,11 @@ public class Circle {
 	}
 	
 	
-	
+	public String displayAreaFormula() {
+		
+		String aFormula = ("PI *  " + r + "  *  " + r + "  =  " + PI * r * r);
+			return(aFormula);
+		
+	}
 
 }
