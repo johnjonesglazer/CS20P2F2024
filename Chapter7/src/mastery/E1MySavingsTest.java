@@ -22,39 +22,79 @@ public class E1MySavingsTest {
 		E1MySavings spot = new E1MySavings();
 		
 		//defining variables
-		//int userSelection = 0;
 		
+		int selection;
 		
-		//System.out.println("Please input the number of your option."); 
-		String selection;
+	
 		
 		
 		
 		while (true) { //loop incase user inputs something other then whats listed
-			System.out.println("Please input the number of your option.");
-			System.out.println("1. Show total in bank.");
-			System.out.println("2. Add pennies.");
-			System.out.println("3. Add nickels.");
-			System.out.println("4. Add dimes.");
-			System.out.println("5. Add quarters.");
-			System.out.println("6. Take money out of bank.");
-			System.out.println("Enter 0 to quit.");
-			selection = scanner.nextLine(); //accepts input
+			try {
 			
-			System.out.println("Please input the number of your option.");
-			selection = scanner.nextLine(); //accepts input
+				System.out.println("Please input the number of your option.");
+				System.out.println("1. Show total in bank.");
+				System.out.println("2. Add pennies.");
+				System.out.println("3. Add nickels.");
+				System.out.println("4. Add dimes.");
+				System.out.println("5. Add quarters.");
+				System.out.println("6. Take money out of bank.");
+				System.out.println("Enter 0 to quit.");
+				String strselection = scanner.nextLine(); //accepts input
+				
+				try {//in case a error happens the code doesnt just end
+					selection = Integer.parseInt(strselection); //changes the input form user to int from string
+				} catch (Exception e) { //to not break code
+					System.out.println("Something went wrong. Please try again.");//tells user to try again
+					System.out.println("");//creates white space
+					continue;//restarts loop
+				}
+					
+				//outputs different stuff based on what user inputs for their selection
+				if (selection == 1) {
+					spot.displayTotalMoney();//gets total money from other file and prints it
+					System.out.println("");//creates white space
+					
+				}else if (selection == 2) { 
+					System.out.println("How many pennies would you like to deposit?");
+					strselection = scanner.nextLine();//accepts user input
+					spot.addPennies(strselection);//runs the add pennies method 
+					
+				}else if (selection == 3) {
+					System.out.println("How many nickels would you like to deposit?");
+					strselection = scanner.nextLine();//accepts user input
+					spot.addNickels(strselection);//runs the add nickels method 
+					
+				}else if (selection == 4) {
+					System.out.println("How many dimes would you like to deposit?");
+					strselection = scanner.nextLine();//accepts user input
+					spot.addDimes(strselection);//runs the add dimes method 
+					
+				}else if (selection == 5) {
+					System.out.println("How many quarters would you like to deposit?");
+					strselection = scanner.nextLine();//accepts user input
+					spot.addQuarters(strselection);//runs the add quarters method 
+					
+				}else if (selection == 6) { 
+					spot.withdrawMoney(strselection);//removes money from the account
+					
+				}else if (selection ==  0) {
+					System.out.println("Bye bye!");
+					break; //ends the application
+					
+				}
+				
+				else { //restarts loop incase anything unexpected happens
+					System.out.println("Something went wrong. Please try again."); 
+					System.out.println("");//whitespace
+					continue;//restarts loop
+				}
 			
-			//if the user inputs anything other then the listed options it will loop and restart the asking process
-			if (selection == "1" || selection == "2" || selection == "3" || selection == "4" || selection == "5" || selection == "6" ||selection ==  "0") {
-				int userSelection = Integer.parseInt(selection); //converts input to int from string and saves it 
-				break; //ends loop
-			} 
-			
-			else { //if user inputs anything other then listed options it will restart loop
-				System.out.println("Error. Please select a listed option."); //says error
+			} catch (Exception e) { //final loop block for if any errors pop up
+				System.out.println("Something went wrong. Please try again."); 
+				System.out.println("");//whitespace
 				continue;//restarts loop
 			}
-		
 		}
 		
 		
