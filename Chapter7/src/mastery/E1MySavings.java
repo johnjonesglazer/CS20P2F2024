@@ -19,7 +19,7 @@ public class E1MySavings {
 	private int quarters;
 	
 	public E1MySavings(){ //creating main starting constructor
-		totalMoney = 0;
+		totalMoney = 0.00;
 		pennies = 0;
 		nickels = 0;
 		dimes = 0;
