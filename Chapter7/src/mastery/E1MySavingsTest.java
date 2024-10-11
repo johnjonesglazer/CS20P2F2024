@@ -18,7 +18,7 @@ public class E1MySavingsTest {
 		//creating scanner for user input
 		Scanner scanner = new Scanner(System.in);
 		
-		//sets spot so we can use methods and such from the other file
+		//creates object so we can use methods and such from the other file
 		E1MySavings spot = new E1MySavings();
 		
 		//defining variables
@@ -76,6 +76,8 @@ public class E1MySavingsTest {
 					spot.addQuarters(strselection);//runs the add quarters method 
 					
 				}else if (selection == 6) { 
+					System.out.println("How much money would you like to withdraw?");
+					strselection = scanner.nextLine();//accepts user input
 					spot.withdrawMoney(strselection);//removes money from the account
 					
 				}else if (selection ==  0) {
@@ -97,7 +99,167 @@ public class E1MySavingsTest {
 			}
 		}
 		
-		
+/* 
+	test case 1
+	
+	
+Please input the number of your option.
+1. Show total in bank.
+2. Add pennies.
+3. Add nickels.
+4. Add dimes.
+5. Add quarters.
+6. Take money out of bank.
+Enter 0 to quit.
+5
+How many quarters would you like to deposit?
+2
+You have deposited 2 quarters!
+
+Please input the number of your option.
+1. Show total in bank.
+2. Add pennies.
+3. Add nickels.
+4. Add dimes.
+5. Add quarters.
+6. Take money out of bank.
+Enter 0 to quit.
+1
+You have $0.5 in your account.
+
+Please input the number of your option.
+1. Show total in bank.
+2. Add pennies.
+3. Add nickels.
+4. Add dimes.
+5. Add quarters.
+6. Take money out of bank.
+Enter 0 to quit.
+4
+How many dimes would you like to deposit?
+28
+You have deposited 28 dimes!
+
+Please input the number of your option.
+1. Show total in bank.
+2. Add pennies.
+3. Add nickels.
+4. Add dimes.
+5. Add quarters.
+6. Take money out of bank.
+Enter 0 to quit.
+1
+You have $3.30 in your account.
+
+Please input the number of your option.
+1. Show total in bank.
+2. Add pennies.
+3. Add nickels.
+4. Add dimes.
+5. Add quarters.
+6. Take money out of bank.
+Enter 0 to quit.
+	
+	
+	
+	
+	test case 2
+	
+	
+Please input the number of your option.
+1. Show total in bank.
+2. Add pennies.
+3. Add nickels.
+4. Add dimes.
+5. Add quarters.
+6. Take money out of bank.
+Enter 0 to quit.
+5
+How many quarters would you like to deposit?
+167
+You have deposited 167 quarters!
+
+Please input the number of your option.
+1. Show total in bank.
+2. Add pennies.
+3. Add nickels.
+4. Add dimes.
+5. Add quarters.
+6. Take money out of bank.
+Enter 0 to quit.
+1
+You have $41.75 in your account.
+
+Please input the number of your option.
+1. Show total in bank.
+2. Add pennies.
+3. Add nickels.
+4. Add dimes.
+5. Add quarters.
+6. Take money out of bank.
+Enter 0 to quit.
+6
+How much money would you like to withdraw?
+21
+You have $20.75 left in your account.
+Please input the number of your option.
+1. Show total in bank.
+2. Add pennies.
+3. Add nickels.
+4. Add dimes.
+5. Add quarters.
+6. Take money out of bank.
+Enter 0 to quit.
+0
+Bye bye!
+
+	
+	
+	
+	
+	test case 3
+		 
+		 
+Please input the number of your option.
+1. Show total in bank.
+2. Add pennies.
+3. Add nickels.
+4. Add dimes.
+5. Add quarters.
+6. Take money out of bank.
+Enter 0 to quit.
+4
+How many dimes would you like to deposit?
+5
+You have deposited 5 dimes!
+
+Please input the number of your option.
+1. Show total in bank.
+2. Add pennies.
+3. Add nickels.
+4. Add dimes.
+5. Add quarters.
+6. Take money out of bank.
+Enter 0 to quit.
+1
+You have $0.5 in your account.
+
+Please input the number of your option.
+1. Show total in bank.
+2. Add pennies.
+3. Add nickels.
+4. Add dimes.
+5. Add quarters.
+6. Take money out of bank.
+Enter 0 to quit.
+0
+Bye bye!
+
+		 
+		 
+		 
+	
+ */
 		
 		
 		

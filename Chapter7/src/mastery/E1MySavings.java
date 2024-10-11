@@ -1,5 +1,7 @@
 package mastery;
 
+import java.text.DecimalFormat;
+
 /*
 Program: E1MySavings.java          Last Date of this Revision: October 8, 2024
 
@@ -17,6 +19,8 @@ public class E1MySavings {
 	private int nickels;
 	private int dimes;
 	private int quarters;
+	
+	
 	
 	public E1MySavings(){ //creating main starting constructor
 		totalMoney = 0.00;
@@ -41,6 +45,7 @@ public class E1MySavings {
 	//to display the total amount of money
 	public double displayTotalMoney() {
 		double totalMoney = (pennies * 0.01 + nickels * 0.05 + dimes * 0.10 + quarters * 0.25); //calculates amount of money in account
+		totalMoney = Math.round(totalMoney * 100.0) / 100.0; //to round to the nearest hundredth
 		System.out.println("You have $" + totalMoney + " in your account."); //says how much is in the account
 		return(totalMoney);//returns total money
 	}
@@ -124,19 +129,22 @@ public class E1MySavings {
 	//when user takes money out of the bank
 	public double withdrawMoney (String strwithdrawAmount) {
 		try {
-			int withdrawAmount = Integer.parseInt(strwithdrawAmount); //changes the input form user to int from string
-			
-			if (withdrawAmount <= totalMoney & withdrawAmount > 0) { //if function so it will only pass if the number the is less then the amount of money in the bank and more then 0
-				totalMoney = (totalMoney - withdrawAmount); //removes user amount iof money from bank
+			double withdrawAmount = Double.parseDouble(strwithdrawAmount); //changes the input form user to int from string
+			double totalMoney = (pennies * 0.01 + nickels * 0.05 + dimes * 0.10 + quarters * 0.25); //calculates amount of money in account
+			totalMoney = Math.round(totalMoney * 100.0) / 100.0; //to round to the nearest hundredth
+			if (withdrawAmount < totalMoney & withdrawAmount > 0) { //if function so it will only pass if the number the is less then the amount of money in the bank and more then 0
+				totalMoney = (totalMoney - withdrawAmount); //removes user amount from money from bank
+				totalMoney = Math.round(totalMoney * 100.0) / 100.0; //to round to the nearest hundredth
 				System.out.println("You have $" + totalMoney + " left in your account."); //says how much is left
 				return(totalMoney); //returns total money
 				
 			} else { //will reject anything else as an answer
-				System.out.println("Error. You can not withdraw that amount money from your bank.");//says error
+				System.out.println("Error. You can not withdraw that amount of money from your bank.");//says error
 				return(totalMoney); //returns total money
 			}
-		} catch (Exception e) {
+		} catch (Exception e) { //final error catcher
 			System.out.println("Something went wrong. Please try again.");
+			totalMoney = Math.round(totalMoney * 100.0) / 100.0; //to round to the nearest hundredth
 			return(totalMoney);
 		}
 	}
