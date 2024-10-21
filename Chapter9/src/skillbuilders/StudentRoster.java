@@ -40,7 +40,7 @@ public class StudentRoster {
 			studentNames[i] = scanner.next();
 		}
 		Arrays.sort(studentNames);
-		
+		System.out.println("Student Roster");
 		for(int i = 0; i < studentNames.length; i++) {
 			
 			System.out.println("Student name: " + studentNames[i]);
