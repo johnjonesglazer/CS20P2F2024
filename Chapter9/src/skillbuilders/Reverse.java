@@ -12,7 +12,7 @@ public class Reverse {
         try {
             for (int i = 0; i < countdown.length; i++) {
                 System.out.println(countdown[i]);
-                Thread.sleep(1000); // Sleep for 1 second
+               	Thread.sleep(1000); // Sleep for 1 second
             }
         } catch (Exception e) {
             e.printStackTrace();
