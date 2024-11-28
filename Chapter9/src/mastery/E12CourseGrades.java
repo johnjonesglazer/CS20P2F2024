@@ -1,6 +1,8 @@
 package mastery;
 
 
+import java.text.NumberFormat;
+
 /*
 Program: E12CourseGrades.java          Last Date of this Revision: October 21, 2024
 
@@ -20,7 +22,8 @@ import java.util.Scanner;
 public class E12CourseGrades {
 
     public static void main(String[] args) {
-        E12GradeBook gradeBook = new E12GradeBook(12, 5); // 12 students and 5 test scores
+        E12GradeBook gradeBook = new E12GradeBook(1, 5); // 12 students and 5 test scores
+        
 
         gradeBook.getGrades();  // Prompt the user to enter grades for each student
         gradeBook.showGrades(); // Display the grades
@@ -31,13 +34,13 @@ public class E12CourseGrades {
         System.out.println("Enter a student number (1-12) to get their average score: ");
         int studentNumber = input.nextInt();
         double studentAvg = gradeBook.studentAvg(studentNumber - 1); // Student number input is 1-based
-        System.out.println("Average score for student " + studentNumber + ": " + studentAvg);
+        System.out.println("Average score for student " + studentNumber + ": " + studentAvg + "%");
 
         // Calculate and display average grade for a test
         System.out.println("Enter a test number (1-5) to get the average score for that test: ");
         int testNumber = input.nextInt();
         double testAvg = gradeBook.testAvg(testNumber - 1); // Test number input is 1-based
-        System.out.println("Average score for test " + testNumber + ": " + testAvg);
+        System.out.println("Average score for test " + testNumber + ": " + testAvg + "%");
     }
 }
 
